@@ -154,14 +154,97 @@ define([], function() {
                 }
                 init() {
                     let _this = this.cartlist;
+                    let _this1 = this.cartitem;
                     this.cartli.on('mouseover', function() {
                         this.index = $(this).index();
                         $(this).addClass('activeli').siblings('li').removeClass('activeli');
                         _this.show();
+                        _this1.eq(this.index).show().siblings('div').hide();
+
+                    });
+                    this.cartli.on('mouseout', () => {
+                        this.cartlist.hide();
+                    });
+                    this.cartitem.hover(() => {
+                        this.cartlist.show();
+                    }, () => {
+                        this.cartlist.hide();
+                        this.cartli.removeClass('activeli');
                     });
                 }
             }
             new Menu().init();
+            class Render { //渲染
+                constructor() {}
+                init() {
+                    const goodslist = $('#item .tab');
+                    $.ajax({
+                        url: 'http://localhost/JS2004/Second-step/dangdangwang1/php/data.php',
+                        dataType: 'json'
+                    }).done(function(data) {
+                        let strhtml = '<ul id="itemmore">';
+                        $.each(data, function(index, value) {
+                            strhtml += `
+                                    <a href="details.html?sid=${value.sid}" target="_blank">
+                                        <li>
+                                            <img  data-original="${value.url}" class="lazy" width="190" height="190"/>
+                                            <p class="name">${value.title}</p>
+                                            <p class="price">${value.price}</p>
+                                        </li>
+                                    </a>
+                                `;
+                        });
+                        strhtml += '</ul>';
+                        goodslist.html(strhtml);
+                        $(function() {
+                            $("img.lazy").lazyload({ effect: "fadeIn" });
+                        });
+                    })
+                }
+            }
+            new Render().init();
+            class Louti { //楼梯效果
+                constructor() {
+                    this.ullist = $('.fix_box ul');
+                    this.typelist = $('.fix_box ul li');
+                    this.louceng = $('.louti');
+                    this.backtop = $('.fix_box .backtop');
+                }
+                init() {
+                    if ($(window).scrollTop() > 400) {
+                        this.ullist.show();
+                    } else {
+                        this.ullist.hide();
+                    }
+                    this.louceng.each(function(index, value) {
+                        if ($(value).offset().top > $(window).scrollTop()) {
+                            $('.fix_box ul li').eq(index).addClass('activebox').siblings('li').removeClass('activebox');
+                            return false;
+                        }
+                    });
+                    $(window).on('scroll', () => {
+                        if ($(window).scrollTop() > 400) {
+                            this.ullist.show();
+                        } else {
+                            this.ullist.hide();
+                        }
+                        this.louceng.each(function(index, value) {
+                            if ($(value).offset().top > $(window).scrollTop()) {
+                                $('.fix_box ul li').eq(index).addClass('activebox').siblings('li').removeClass('activebox');
+                                return false;
+                            }
+                        });
+                    });
+                    this.backtop.on('click', () => {
+                        $(window).scrollTop(0);
+                    })
+                }
+            }
+            new Louti().init();
+            class Tabnews {
+
+            }
+            new Tabnews.init();
         }
     }
 });
