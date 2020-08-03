@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../src/css/login.css">
+    <link rel="stylesheet" href="../src/font/iconfont.css">
+</head>
+
+<body>
+    <header>
+        <a href="index123.html">
+            <img src="http://img61.ddimg.cn/upload_img/00405/luyi/DDlogoNEW.gif" alt="">
+        </a>
+    </header>
+    <main>
+        <div>
+            <div class="notice">
+                <div>
+                    !!!请勿设置与邮箱及其他网站相同的登录及支付密码，<a href="http://blog.dangdang.com/?p=22276">谨防诈骗</a>！
+                </div>
+            </div>
+            <div class="wrap">
+                <p class="title">帐号密码登录</p>
+                <form action="" class="logininfo">
+                    <p>
+                        <label for=""><span class="iconfont icon-xingmingyonghumingnicheng"></span></label>
+                        <input type="text" placeholder="用户名/邮箱">
+                    </p>
+                    <div>
+                        <span id="liDivErrorMessage" style="display: none;">请输入邮箱/昵称/手机号码</span>
+                    </div>
+                    <p>
+                        <label for=""><span class="iconfont icon-mima"></span></label>
+                        <input type="text" placeholder="密码">
+                    </p>
+                    <div class="tips" id="pass_mindstyle">
+                        <span id="login_password_error" style="display: none;">请填写长度为6-20个字符的密码</span>
+                    </div>
+                </form>
+                <span class="yzm">
+                    <label for=""><span class="iconfont icon-yanzhengma"></span></label>
+                <input type="text" placeholder="验证码">
+                </span>
+                <span>随机验证码</span>
+                <div class="autowrap">
+                    <input type="checkbox" class="auto"><span class="tip">七天内自动登录</span>
+                </div>
+                <p class="btn">
+                    <a id="submitLoginBtn" href="javascript:;">登&nbsp;录</a>
+                </p>
+                <p class="reg">
+                    <a href="registry.html">立即注册</a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车列表展示</title>
+    <link rel="stylesheet" href="../src/css/cart.css">
+</head>
+
+<body>
+    <!-- 个人信息导航栏 -->
+    <div class="info_container">
+        <div class="info">
+            <div class="welcome">
+                <span>欢迎光临当当，请
+                    <a href="login.html" id="login" class="login">登录</a>
+                    <a href="registry.html" id="registry" class="registry">成为会员</a>
+                </span>
+                <span class="login_after">
+                    Hi,<span class="username">132*****2118</span>
+                <a href="javascript:;">[退出]</a>
+                </span>
+            </div>
+            <div class="rightinfo">
+                <ul class="infolist">
+                    <li>
+                        <a href="javascript:;"><span class="iconfont icon-gouwuche"></span>购物车<span class="cartnum ">0</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">我的订单</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">我的云书房</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">我的当当<span class="iconfont icon-more "></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">0元购物<span class="iconfont icon-more "></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">小说投稿</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">我要出书</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">企业采购<span class="iconfont icon-more "></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">客户服务</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ad_bar">
+        <a href="javascript:;">
+            <img src="http://img61.ddimg.cn/2020/7/24/2020072417161249423.jpg" alt=" ">
+        </a>
+    </div>
+    <div class="search_container">
+        <div class="search">
+            <div class="logo">
+                <a href="index123.html">
+                    <img src="http://img61.ddimg.cn/upload_img/00405/luyi/DDlogoNEW.gif" alt="" title="当当">
+                </a>
+                <h1>购物车</h1>
+            </div>
+            <div class="right">
+                <div class="current">我的购物车</div>
+            </div>
+        </div>
+    </div>
+    <div id="cart">
+        <ul>
+            <li class="f1">
+                <input type="checkbox">
+                <span>全选</span>
+            </li>
+            <li class="f2">商品信息</li>
+            <li class="f3">单价（元）</li>
+            <li class="f3">数量</li>
+            <li class="f3">金额（元）</li>
+            <li class="f4">操作</li>
+        </ul>
+        <div class="item">
+            <table class="shop_title" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <a href="javascript:;">当当自营</a>
+                    </td>
+                </tr>
+            </table>
+            <div class="cart_table">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="row1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="row_img">
+                            <a href="javascript:;">
+                                <img src="http://img3x0.ddimg.cn/5/21/23414990-1_m_4.jpg" alt="" width="80" height="80">
+                            </a>
+                        </td>
+                        <td class="row_name">
+                            <div class="name">
+                                <a href="javascript:;">龙族3黑月之潮·下</a>
+                            </div>
+                        </td>
+                        <td class="price_every">
+                            <span>¥18.40</span>
+                        </td>
+                        <td class="row3">
+                            <span class="amount">
+                                <a href="javascript:;">-</a>
+                                <input type="text" value="1">
+                                <a href="javascript:;">+</a>
+                            </span>
+                        </td>
+                        <td class="row4">
+                            <span class="red">¥0.00</span>
+                        </td>
+                        <td class="row5">
+                            <span>
+                                <a href="javascript:;" class="fn-add-wish">移入收藏</a>
+                            </span>
+                            <span>
+                                <a href="javascript:;" class="fn-remove-product">删除
+                                </a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tfoot>
+                        <tr class="total">
+                            <td class="row1">&nbsp;</td>
+                            <td class="row_img">店铺合计</td>
+                            <td colspan="2">&nbsp;</td>
+                            <td colspan="3" class="row4">
+                                <span class="red big">¥0.00</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 结算 -->
+    <div class="sum">
+        <div class="sum_wrap">
+            <div class="sum_right">
+                <a class="total_btn" href="javascript:;" id="checkout_btn">结&nbsp;&nbsp;算</a>
+                <div class="subtotal">
+                    <p><span class="cartsum">总计(不含运费)：</span><span id="payAmount" class="price">¥0.00</span></p>
+                    <p><span class="cartsum">已节省：</span><span id="totalFavor">¥0.00</span></p>
+                </div>
+            </div>
+            <div class="sum_left">
+                <input type="checkbox">
+                <span>全选</span>
+                <a href="javascript:;">批量删除</a>
+                <span class="a">已选择<span class="red">0</span>件商品</span>
+            </div>
+            <div class="square_right"></div>
+            <div class="square_left"></div>
+            <div class="square_bottom"></div>
+        </div>
+    </div>
+</body>
+
+</html>

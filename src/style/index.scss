@@ -1,0 +1,549 @@
+@import "common";
+$size:1200px;
+$maincolor:red;
+$fontsize:12px;
+$fontcolor:#969696;
+@mixin centerBox($w, $h) {
+    width: $w;
+    height: $h;
+    margin: 0 auto;
+}
+
+@mixin innerblockBox($w, $h) {
+    display: inline-block;
+    width: $w;
+    height: $h;
+    text-align: center;
+}
+
+%itema {
+    float: left;
+    width: 199px;
+    height: 170px;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    border-width: 0 1px 1px 0;
+}
+
+.ad_bar {
+    @include centerBox($size, 200px);
+    overflow: hidden;
+}
+
+.info_container {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #f2f2f2;
+    .info {
+        @include centerBox($size, 34px);
+        line-height: 34px;
+        .leftinfo {
+            float: left;
+            .icon-more {
+                font-size: $fontsize;
+                margin-left: 2px;
+                margin-top: 2px;
+            }
+        }
+        .rightinfo {
+            float: right;
+            .welcome {
+                float: left;
+                .login {
+                    color: $maincolor;
+                }
+            }
+            .infolist {
+                float: right;
+            }
+        }
+    }
+}
+
+.info .infolist li {
+    float: left;
+    list-style: none;
+    a {
+        border-right: 1px solid #e6e6e6;
+        padding: 0 8px;
+    }
+    &:last-child a {
+        border: none;
+    }
+    .icon-gouwuche {
+        color: $maincolor;
+        font-size: $fontsize;
+        margin: 0 5px;
+    }
+    .cartnum {
+        color: $maincolor;
+    }
+}
+
+.info .rightinfo .welcome .registry:hover {
+    color: $maincolor;
+}
+
+.search {
+    @include centerBox($size, auto);
+    overflow: hidden;
+    .logo {
+        float: left;
+    }
+    .right {
+        float: right;
+        .form {
+            float: left;
+            margin-right: 57px;
+            .sousuo {
+                border: 2px solid $maincolor;
+                border-right: none;
+                width: 410px;
+                height: 40px;
+                margin-top: 20px;
+            }
+            .select {
+                @include innerblockBox(108px, 40px);
+                font-size: 16px;
+                color: $fontcolor;
+                border: 2px solid $maincolor;
+                border-right: none;
+                border-left: none;
+                line-height: 37px;
+                margin-left: -4px;
+                background-color: #f6f6f6;
+            }
+            .searchbtn {
+                @include innerblockBox(48px, 40px);
+                background: #ff2832;
+                border: 2px solid $maincolor;
+                border-left: none;
+                font-size: 45px;
+                margin-left: -4px;
+                color: white;
+            }
+            .hotsearch {
+                margin-top: 5px;
+                color: $fontcolor;
+                a {
+                    cursor: pointer;
+                    margin-right: 10px;
+                    color: $fontcolor;
+                    &:hover {
+                        text-decoration: underline;
+                        color: $maincolor;
+                    }
+                }
+            }
+        }
+        .news {
+            float: right;
+            margin-top: 22px;
+            a {
+                font-size: 14px;
+                display: inline-block;
+                &:first-child {
+                    width: 107px;
+                    height: 36px;
+                    border: 2px solid $maincolor;
+                    background: $maincolor;
+                    text-align: center;
+                    color: white;
+                    line-height: 36px;
+                    .icon-gouwuche {
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        color: $maincolor;
+                        background: #f6f6f6;
+                        border: 2px solid #dcdcdc;
+                    }
+                }
+                &:last-child {
+                    height: 36px;
+                    width: 86px;
+                    text-align: center;
+                    line-height: 39px;
+                    margin-left: -3px;
+                    border: 2px solid #dcdcdc;
+                    border-left: none;
+                    background-color: #f6f6f6;
+                    &:hover {
+                        color: $maincolor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav_container {
+    border-bottom: 2px solid $maincolor;
+    .nav_top {
+        @include centerBox($size, 40px);
+        ul li {
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 15px;
+            font-size: 14px;
+            font-weight: 900;
+            cursor: pointer;
+            color: #323232;
+            &:first-child {
+                width: 170px;
+                margin-right: 17px;
+                background: $maincolor;
+                color: white;
+                text-indent: 10px;
+                .icon-more {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+}
+
+.first_wrap {
+    @include centerBox($size, 508px);
+    padding-bottom: 20px;
+    position: relative;
+    .fir_left {
+        float: left;
+        width: 200px;
+        background-color: #fafafa;
+        padding: 4px 0;
+        height: 480px;
+        ul li {
+            width: 182px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            padding: 0 0 0 18px;
+            color: #323232;
+            cursor: pointer;
+        }
+        .activeli {
+            border: 1px solid $maincolor;
+            border-right: 1px solid white;
+            color: $maincolor;
+            z-index: 9999;
+            background: white;
+        }
+    }
+    .fir_right {
+        float: right;
+        .bar {
+            float: left;
+            width: 796px;
+            height: 487px;
+            .topbar {
+                position: relative;
+                height: 326px;
+                overflow: hidden;
+            }
+            .bottombar {
+                position: relative;
+                height: 160px;
+                border-bottom: 1px solid #e6e6e6;
+            }
+        }
+        .fir_news {
+            float: right;
+            width: 203px;
+            .imgnotice {
+                width: 202px;
+                height: 194px;
+            }
+            .middlenotice {
+                height: 173px;
+                border-right: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+            }
+            .over {
+                overflow: hidden;
+                height: 118px;
+                position: relative;
+                border-right: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+            }
+        }
+    }
+    .second_li {
+        width: 998px;
+        height: 507px;
+        position: absolute;
+        top: 0;
+        left: 200px;
+        background: white;
+        border: 1px solid $maincolor;
+        border-top: none;
+        display: none;
+        .item {
+            width: 998px;
+            height: 507px;
+            position: absolute;
+            top: 0;
+            text-align: left;
+            display: none;
+        }
+    }
+}
+
+.fir_right .bar {
+    .topbar {
+        .indexbar {
+            position: absolute;
+            bottom: 5px;
+            left: 380px;
+            li {
+                float: left;
+                width: 20px;
+                height: 20px;
+                font: $fontsize;
+                color: #fff;
+                text-align: center;
+                overflow: hidden;
+                cursor: pointer;
+                background-color: #646464;
+                margin-right: 6px;
+                border-radius: 10px;
+            }
+            .active {
+                background: $maincolor;
+            }
+        }
+        .picbar {
+            li {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                &:first-child {
+                    opacity: 1;
+                }
+            }
+        }
+        .btn_l {
+            position: absolute;
+            width: 33px;
+            height: 70px;
+            background-color: #000;
+            top: 122px;
+            line-height: 75px;
+            cursor: pointer;
+            opacity: 0.2;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+        }
+        .btn_r {
+            @extend .btn_l;
+        }
+    }
+    .bottombar {
+        ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            li {
+                float: left;
+                border-right: 1px solid #e6e6e6;
+            }
+        }
+    }
+}
+
+.fir_right .fir_news .middlenotice {
+    .headnotice {
+        height: 29px;
+        ul li {
+            float: left;
+            width: 101px;
+            height: 29px;
+            line-height: 29px;
+            text-align: center;
+            color: #646464;
+            font-size: 14px;
+        }
+        .noactli {
+            background: grey;
+        }
+    }
+    .notice {
+        ul li {
+            padding-left: 10px;
+            width: 183px;
+            height: 25px;
+            line-height: 25px;
+        }
+    }
+}
+
+.fir_right .fir_news .over {
+    ul {
+        width: 606px;
+        li {
+            float: left;
+        }
+    }
+    .mix_index {
+        position: absolute;
+        bottom: 5px;
+        left: 85px;
+        li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #c8c8c8;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 24px;
+            margin: 0 6px 0 0;
+        }
+        .current {
+            background: $maincolor;
+        }
+    }
+}
+
+.scroll {
+    width: 100%;
+    background-color: rgba(229, 27, 41, 0.9);
+    position: fixed;
+    top: -52px;
+    z-index: 9999;
+    .scroll_nav {
+        @include centerBox(1200px, auto);
+        overflow: hidden;
+        .scroll_logo {
+            padding: 6px 0 0;
+            width: 210px;
+            float: left;
+            overflow: hidden;
+            height: 46px;
+        }
+        .scroll_search {
+            float: left;
+            width: 738px;
+            height: 32px;
+            background: #fff;
+            font: 14px/32px "Microsoft YaHei";
+            margin-top: 9px;
+            padding-left: 10px;
+            position: relative;
+            input {
+                width: 738px;
+            }
+            .icon-fangdajing {
+                position: absolute;
+                font-size: 30px;
+                right: -32px;
+                background: #d21f28;
+                color: white;
+            }
+        }
+    }
+}
+
+.motherbaby_toy {
+    @include centerBox($size, 448px);
+    margin-bottom: 20px;
+    .top {
+        height: 40px;
+        font: bold 20px/24px "Microsoft YaHei";
+        color: #323232;
+        .home_screen_head {
+            float: left;
+            margin: 9px 0 7px;
+            padding: 0 20px 0 6px;
+            font: bold 20px/24px "Microsoft YaHei";
+            border-right: 1px solid #b7b7b7;
+            background: #fff;
+            color: #323232;
+        }
+        .list_aa {
+            float: left;
+            height: 40px;
+            overflow: hidden;
+            li {
+                float: left;
+                padding: 0 30px;
+                margin: 13px 0 0 -13px;
+                background: url(http://img63.ddimg.cn/upload_img/00111/home/title_bg.png) no-repeat left 3px;
+                font: 16px/20px "Microsoft YaHei";
+            }
+        }
+    }
+    .middle {
+        border: 1px solid #e6e6e6;
+        border-width: 1px 0 0 1px;
+        position: relative;
+        width: 1199px;
+        height: 342px;
+        .left {
+            left: 0;
+            width: 400px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            float: left;
+            a {
+                @extend %itema;
+            }
+            img {
+                width: 199px;
+                height: 170px;
+            }
+        }
+        .lunbo_mid {
+            left: 400px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            float: left;
+        }
+        .right {
+            @extend .left;
+            left: 799px;
+            a {
+                @extend %itema;
+            }
+            img {
+                width: 199px;
+                height: 170px;
+            }
+        }
+    }
+    .bottom {
+        height: 64px;
+        border: 1px solid #e6e6e6;
+        border-top: 0;
+        overflow: hidden;
+        background-color: #f7f7f7;
+        position: relative;
+        .over {
+            width: 1179px;
+            overflow: hidden;
+            margin: 10px auto 0;
+            ul {
+                width: 10000px;
+                position: relative;
+                li {
+                    float: left;
+                    width: 118px;
+                    height: 44px;
+                    margin-left: -1px;
+                    border-left: 1px dashed #dfdfdf;
+                    a {
+                        display: block;
+                        width: 109px;
+                        height: 44px;
+                        margin-left: 4px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

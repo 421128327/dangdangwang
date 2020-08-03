@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1902708",
+      "name": "店铺",
+      "font_class": "dianpu",
+      "unicode": "f0315",
+      "unicode_decimal": 983829
+    },
+    {
+      "icon_id": "6447164",
+      "name": "大图展示",
+      "font_class": "datuzhanshi",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "7524658",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e771",
+      "unicode_decimal": 59249
+    },
+    {
+      "icon_id": "8288858",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e850",
+      "unicode_decimal": 59472
+    }
+  ]
+}

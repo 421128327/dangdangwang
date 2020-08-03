@@ -1,0 +1,658 @@
+@charset "utf-8";
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+i {
+    font-style: normal;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    background-image: -webkit-linear-gradient(transparent, transparent);
+    background-image: linear-gradient(transparent, transparent);
+    font-family: "Helvetica", "Arial";
+}
+
+textarea {
+    resize: none;
+}
+
+article， aside， details， figcaption， figure， footer， header， hgroup， menu， nav， section {
+    display: block;
+}
+
+img {
+    display: block;
+    height: auto;
+    /* vertical-align: top; */
+}
+
+.video embed， .video object， .video iframe {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    border: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+em {
+    font-style: normal;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff;
+    -webkit-font-smoothing: antialiased
+}
+
+a {
+    color: #666;
+}
+
+i {
+    cursor: default;
+}
+
+
+/* 顶部广告栏 */
+
+.ad_bar {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ad_bar img {
+    width: 1200px;
+    height: 60px;
+}
+
+
+/* 个人信息导航栏 */
+
+.info_container {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.info {
+    width: 1200px;
+    margin: 0 auto;
+    height: 34px;
+    line-height: 34px;
+}
+
+.info .leftinfo {
+    float: left;
+}
+
+.info .icon-more {
+    font-size: 12px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.info .rightinfo {
+    float: right;
+}
+
+.info .rightinfo .welcome {
+    float: left;
+}
+
+.info .rightinfo .infolist {
+    float: right;
+}
+
+.info .infolist li {
+    list-style: none;
+    float: left;
+}
+
+.info .rightinfo .welcome .login {
+    color: red;
+}
+
+.info .rightinfo .infolist li a {
+    border-right: 1px solid #e6e6e6;
+    padding: 0 8px;
+}
+
+.info .rightinfo .infolist li:last-child a {
+    border: none;
+}
+
+.info .rightinfo .infolist li .icon-gouwuche {
+    color: red;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.info .rightinfo .infolist li .cartnum {
+    color: red;
+}
+
+.info .rightinfo .welcome .registry:hover {
+    color: red;
+}
+
+
+/* 搜索栏 */
+
+.search {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.search .logo {
+    float: left;
+}
+
+.search .right {
+    float: right;
+}
+
+.search .right .form {
+    float: left;
+}
+
+.search .right .news {
+    float: right;
+    margin-top: 22px;
+}
+
+.search .form {
+    margin-right: 57px;
+}
+
+.search .sousuo {
+    border: 2px solid red;
+    border-right: none;
+    width: 410px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.search .select {
+    display: inline-block;
+    width: 108px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #969696;
+    border: 2px solid red;
+    border-right: none;
+    border-left: none;
+    line-height: 37px;
+    margin-left: -4px;
+    background-color: #f6f6f6;
+}
+
+.search .form .searchbtn {
+    display: inline-block;
+    width: 48px;
+    height: 40px;
+    background: #ff2832;
+    border: 2px solid red;
+    border-left: none;
+    height: 40px;
+    font-size: 45px;
+    margin-left: -4px;
+    color: white;
+    text-align: center;
+}
+
+.search .hotsearch {
+    margin-top: 5px;
+    color: #969696;
+}
+
+.search .hotsearch a {
+    cursor: pointer;
+    margin-right: 10px;
+    color: #969696;
+}
+
+.search .hotsearch a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.search .right .news a {
+    font-size: 14px;
+    display: inline-block;
+}
+
+.search .right .news a:first-child {
+    width: 107px;
+    height: 36px;
+    border: 2px solid red;
+    background: red;
+    text-align: center;
+    color: white;
+    line-height: 36px;
+}
+
+.search .right .news a:first-child .icon-gouwuche {
+    margin-right: 10px;
+}
+
+.search .right .news a:last-child {
+    height: 36px;
+    width: 86px;
+    text-align: center;
+    line-height: 39px;
+    margin-left: -3px;
+    border: 2px solid #dcdcdc;
+    border-left: none;
+    background-color: #f6f6f6;
+}
+
+.search .right .news a:first-child:hover {
+    color: red;
+    background: #f6f6f6;
+    border: 2px solid #dcdcdc;
+}
+
+.search .right .news a:last-child:hover {
+    color: red;
+}
+
+.nav_container {
+    border-bottom: 2px solid red;
+}
+
+.nav_top {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.nav_top ul li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #323232;
+}
+
+.nav_top ul li:first-child {
+    width: 170px;
+    margin-right: 17px;
+    background: red;
+    color: white;
+    text-indent: 10px;
+}
+
+.nav_top ul li:first-child .icon-more {
+    margin-left: 50px;
+}
+
+.find {
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.find ul li:first-child {
+    color: #333333;
+    font-size: 13px;
+}
+
+.all {
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid red;
+}
+
+.all div {
+    width: 122px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid red;
+    text-align: center;
+    color: white;
+    background: red;
+    font-size: 16px;
+}
+
+section {
+    width: 1200px;
+    height: 44px;
+    line-height: 44px;
+    margin: 0 auto;
+    color: #333;
+    background: #f5f5f5;
+    text-indent: 20px;
+}
+
+section span {
+    color: red;
+    font-size: 12px;
+}
+
+section .icon-jiantou {
+    font-size: 12px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.navlist {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navlist ul li {
+    border-bottom: 1px solid #eeeceb;
+    height: 27px;
+}
+
+.navlist .listleft {
+    float: left;
+    width: 71px;
+    height: 18px;
+    padding: 9px 0px 0px 12px;
+    color: #999;
+    background: #fdebec;
+}
+
+.navlist .listright {
+    float: right;
+    width: 1117px;
+    line-height: 27px;
+}
+
+.navlist .listright .navinfo {
+    float: left;
+}
+
+.navlist .listright .navinfo span {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.navlist .listright .more {
+    float: right;
+}
+
+.navlist .listright .more .icon-more {
+    font-size: 12px;
+}
+
+.tools {
+    width: 1200px;
+    margin: 0 auto;
+    height: 32px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+.tools .toolsleft {
+    float: left;
+}
+
+.tools .toolsleft ul li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.tools .toolsleft ul li input {
+    width: 34px;
+    border: solid 1px #e1e1e1;
+    background: white;
+}
+
+.tools .toolsleft ul .trans input {
+    width: 66px;
+    border: solid 1px #e1e1e1;
+    background: white;
+    text-align: center;
+}
+
+.tools .toolsleft ul .check input {
+    vertical-align: middle;
+    margin-right: -3px;
+}
+
+.tools .toolsright {
+    float: right;
+    line-height: 32px;
+}
+
+.tools .toolsright span {
+    font-size: 12px;
+}
+
+.tools .toolsright .icon-datuzhanshi {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.tools .toolsright .active {
+    color: red;
+}
+
+
+/* 商品展示区域 */
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+main .shoplist {
+    width: 960px;
+    padding-top: 20px;
+}
+
+main .shoplist ul {
+    width: 980px;
+    margin-left: 15px;
+}
+
+main .shoplist ul li {
+    width: 200px;
+    height: 379px;
+    line-height: 20px;
+    margin-right: 27px;
+    padding: 5px;
+    border: 1px solid #ecebeb;
+    margin-bottom: 40px;
+    background: #fff;
+    float: left;
+}
+
+.shoplist .line1 .price {
+    margin-top: 10px;
+}
+
+.shoplist .line1 .price .price_n {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.shoplist .line1 .price .price_r {
+    color: #878787;
+    padding-right: 10px;
+    text-decoration: line-through;
+}
+
+.shoplist .line1 .search_hot_word {
+    height: 20px;
+    line-height: 20px;
+    color: #fa5000;
+    overflow: hidden;
+}
+
+.shoplist .line1 .star a {
+    color: blue;
+}
+
+.shoplist .line1 .star a:hover {
+    text-decoration: underline;
+}
+
+.shoplist .line1 .new_lable {
+    margin-top: 10px;
+    height: 20px;
+    display: block;
+    float: none!important;
+    margin-left: 0!important;
+    overflow: hidden;
+    line-height: 16px;
+}
+
+.shoplist .line1 .new_lable1 {
+    background-color: white;
+    border: 1px solid #ff2832;
+    color: #ff2832;
+    border-radius: 2px;
+    padding: 0 2px;
+    font-size: 12px;
+    margin-right: 5px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 4px;
+    line-height: 14px;
+}
+
+.shoplist .line1 .shop_button {
+    position: relative;
+}
+
+.shoplist .line1 .shop_button .bottom_p {
+    width: 208px;
+    height: 28px;
+    border: 1px solid #ecebeb;
+    position: absolute;
+    left: -5px;
+    top: 11px;
+}
+
+.shoplist .line1 .shop_button .bottom_p .btn_cart {
+    float: left;
+    color: #646464;
+    width: 132px;
+    background-color: white;
+    font-size: 12px;
+    border-radius: 0;
+    text-align: center;
+    margin-right: 0;
+    height: 28px;
+    line-height: 28px;
+}
+
+.shoplist .line1 .shop_button .bottom_p .btn_cart .icon-gouwuche {
+    margin-right: 5px;
+}
+
+.shoplist .line1 .shop_button .bottom_p .btn_like {
+    width: 75px;
+    border-left: 1px solid #ecebeb;
+    float: left;
+    color: #646464;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 0;
+}
+
+.shoplist .line1 .shop_button .bottom_p a:hover {
+    background-color: #fdf5f5;
+    color: #ff2832;
+    cursor: pointer;
+}
+
+.shoplist .line1 .empty_div {
+    height: 22px;
+}
+
+.shoplist .line1:hover {
+    border: 1px solid red;
+}
+
+.shoplist .line1 .new_lable2 {
+    background-color: #ff2933;
+    color: white;
+    margin-right: 5px;
+    font-size: 12px;
+    padding: 1px 2px;
+    border-radius: 2px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 4px;
+    line-height: 14px;
+}
+
+.shoplist .line1 .link .icon-dianpu {
+    color: #fa5000;
+}

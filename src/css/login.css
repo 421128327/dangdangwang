@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+main {
+    width: 1200px;
+    height: 598px;
+    margin: 0 auto;
+    background: url(http://a.dangdang.com/api/data/cpx/img/38930001/1) no-repeat center center;
+}
+
+main>div {
+    float: right;
+    width: 362px;
+    border: 1px solid #eef2f4;
+    padding: 15px 25px 15px 15px;
+    box-shadow: 0px 1px 2px #eee;
+    margin-top: 89px;
+    position: relative;
+}
+
+main .notice {
+    width: 379px;
+    height: 24px;
+    line-height: 24px;
+    color: #828282;
+    padding-left: 22px;
+    background: #fef7f5;
+    font-size: 12px;
+    border: 1px solid #fedbd1;
+    position: absolute;
+    top: -27px;
+    left: 0;
+}
+
+main .wrap {
+    width: 311px;
+    margin: 0 auto;
+}
+
+main .wrap .title {
+    font-size: 18px;
+    color: #3c3c3c;
+    margin-top: 5px;
+}
+
+main .wrap .logininfo p {
+    height: 38px;
+    line-height: 38px;
+    margin-top: 20px;
+    border: 1px solid #e6e6e6;
+    color: #6e6e6e;
+}
+
+main .wrap .logininfo span {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+main .wrap input {
+    outline: none;
+    border: none;
+}
+
+main .wrap .yzm {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 20px;
+    border: 1px solid #e6e6e6;
+    color: #6e6e6e;
+}
+
+main .wrap .yzm span {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+main .wrap .autowrap {
+    margin-top: 20px;
+}
+
+main .wrap .auto {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+main .wrap .tip {
+    font-size: 12px;
+    color: #6e6e6e;
+}
+
+main .wrap .btn {
+    margin-top: 20px;
+}
+
+main .wrap .btn a {
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    height: 44px;
+    text-align: center;
+    font: normal 20px/44px "Microsoft Yahei";
+    background: #ff2832;
+    text-decoration: none;
+}
+
+main .wrap .reg {
+    margin-top: 10px;
+}
+
+main .wrap .reg a {
+    float: right;
+    text-decoration: none;
+    font-size: 12px;
+    color: #6e6e6e;
+}
+
+main .wrap .reg a:hover {
+    text-decoration: underline;
+    color: blue;
+}
