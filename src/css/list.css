@@ -461,6 +461,66 @@ section .icon-jiantou {
     height: 30px;
     line-height: 30px;
     padding: 0 10px;
+    cursor: pointer;
+}
+
+.tools .toolsleft ul .icon {
+    position: relative;
+    width: 24px;
+}
+
+.tools .toolsleft ul .icon .icon_sort1 {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 24px;
+    height: 30px;
+    padding: 0 10px;
+    display: none;
+}
+
+.tools .toolsleft ul .icon .icon_sort2 {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 24px;
+    height: 30px;
+    padding: 0 10px;
+    display: none;
+}
+
+.tools .toolsleft ul .icon div .icon-more {
+    position: absolute;
+    bottom: -5px;
+    right: -7px;
+}
+
+.tools .toolsleft ul .icon .icon_sort1 .icon-more {
+    color: red;
+    font-weight: 900;
+}
+
+.tools .toolsleft ul .icon div .icon-jiantou-copy {
+    position: absolute;
+    top: -4px;
+    right: -7px;
+}
+
+.tools .toolsleft ul .icon .icon_sort2 .icon-jiantou-copy {
+    color: red;
+    font-weight: 900;
+}
+
+.tools .toolsleft ul li .icon-more {
+    position: absolute;
+    bottom: -5px;
+    right: -7px;
+}
+
+.tools .toolsleft ul li .icon-jiantou-copy {
+    position: absolute;
+    top: -4px;
+    right: -7px;
 }
 
 .tools .toolsleft ul li input {
@@ -527,6 +587,7 @@ main .shoplist ul li {
     margin-bottom: 40px;
     background: #fff;
     float: left;
+    position: relative;
 }
 
 .shoplist .line1 .price {
@@ -542,8 +603,13 @@ main .shoplist ul li {
 
 .shoplist .line1 .price .price_r {
     color: #878787;
-    padding-right: 10px;
+    padding-right: 5px;
     text-decoration: line-through;
+}
+
+.shoplist .line1 .name {
+    overflow: hidden;
+    height: 20px;
 }
 
 .shoplist .line1 .search_hot_word {
@@ -585,17 +651,13 @@ main .shoplist ul li {
     line-height: 14px;
 }
 
-.shoplist .line1 .shop_button {
-    position: relative;
-}
-
 .shoplist .line1 .shop_button .bottom_p {
     width: 208px;
     height: 28px;
     border: 1px solid #ecebeb;
     position: absolute;
-    left: -5px;
-    top: 11px;
+    left: 0px;
+    bottom: 0px;
 }
 
 .shoplist .line1 .shop_button .bottom_p .btn_cart {
@@ -655,4 +717,100 @@ main .shoplist ul li {
 
 .shoplist .line1 .link .icon-dianpu {
     color: #fa5000;
+}
+
+.pagelist {
+    clear: both;
+    width: 1170px;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.m-style {
+    float: right;
+    text-align: center;
+}
+
+.m-style:before,
+.m-style:after {
+    content: "";
+    display: table;
+}
+
+.m-style:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.m-style span {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.m-style .active {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #e91e63;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #e91e63;
+}
+
+.m-style a {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.m-style a:hover {
+    color: #fff;
+    background: #e91e63;
+}
+
+.m-style .next,
+.m-style .prev {
+    font-family: "Simsun";
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
+}
+
+.now,
+.count {
+    padding: 0 5px;
+    color: #f00;
+}
+
+.eg img {
+    max-width: 800px;
+    min-height: 500px;
+}
+
+.pagelist .page input {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    outline: none;
+    color: #bdbdbd;
+    font-size: 14px;
 }

@@ -241,10 +241,22 @@ define([], function() {
                 }
             }
             new Louti().init();
-            class Tabnews {
-
+            class Tabnews { //新闻Tab切换
+                constructor() {
+                    this.headnotice = $('.fir_right .fir_news .middlenotice .headnotice ul li');
+                    this.notice = $('.first_wrap .fir_right .fir_news .notice ul');
+                }
+                init() {
+                    let _this = this.headnotice;
+                    let _this1 = this.notice;
+                    this.headnotice.on('mouseover', function() {
+                        console.log($(this).index());
+                        _this.eq($(this).index()).removeClass('noactli').siblings('li').addClass('noactli');
+                        _this1.eq($(this).index()).show().siblings('ul').hide();
+                    });
+                }
             }
-            new Tabnews.init();
+            new Tabnews().init();
         }
     }
 });

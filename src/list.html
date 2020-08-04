@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>列表页</title>
-    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="./css/list.css">
     <link rel="stylesheet" href="../src/font/iconfont.css">
     <link rel="stylesheet" href="../src/font/font/iconfont.css">
+    <script src="./script/require.js" defer async="true" data-main="./script/main.js" id="currentpage" currentmod="list"></script>
 </head>
 
 <body>
@@ -231,7 +232,14 @@
                 <li>销量 ↓ </li>
                 <li>好评 ↓ </li>
                 <li>出版时间 ↓ </li>
-                <li>价格</li>
+                <li class="icon">
+                    <!-- 初始 -->
+                    <div class="default" title="点击后按价格由低到高">价格<span class="iconfont icon-jiantou-copy"></span><span class="iconfont icon-more"></span></div>
+                    <!-- 降序 -->
+                    <div class="icon_sort1" title="点击后按价格由低到高">价格<span class="iconfont icon-jiantou-copy"></span><span class="iconfont icon-more"></span></div>
+                    <!-- 升序 -->
+                    <div class="icon_sort2" title="点击后按价格由高到低">价格<span class="iconfont icon-jiantou-copy"></span><span class="iconfont icon-more"></span></div>
+                </li>
                 <li>
                     <input type="text" placeholder="￥">-
                     <input type="text" placeholder="￥">
@@ -257,7 +265,7 @@
     <!-- 商品展示区域 -->
     <main>
         <div class="shoplist">
-            <ul>
+            <!-- <ul>
                 <li class="line1">
                     <a>
                         <img src="http://img3m0.ddimg.cn/5/21/23414990-1_b_4.jpg" alt=" 龙族3黑月之潮·下">
@@ -434,11 +442,14 @@
                         </p>
                     </div>
                 </li>
-
-
-            </ul>
+            </ul> -->
         </div>
     </main>
+    <!-- 分页的结构：css自由设计 -->
+    <div class="pagelist">
+        <div class="m-style page">
+        </div>
+    </div>
 </body>
 
 </html>

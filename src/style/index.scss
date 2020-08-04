@@ -608,11 +608,20 @@ $fontcolor:#969696;
 }
 
 .fix_box {
+    left: 50%;
+    margin-left: -638px;
+    position: fixed;
+    bottom: 30px;
+    z-index: 10000;
+    font-family: "Microsoft Yahei";
     ul {
-        position: fixed;
-        bottom: 30px;
-        left: 314px;
-        display: none;
+        width: 38px;
+        list-style: none;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
         li {
             height: 40px;
             line-height: 40px;

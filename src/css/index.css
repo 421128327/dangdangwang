@@ -701,11 +701,22 @@ i {
   position: relative;
 }
 
-.fix_box ul {
+.fix_box {
+  left: 50%;
+  margin-left: -638px;
   position: fixed;
   bottom: 30px;
-  left: 314px;
-  display: none;
+  z-index: 10000;
+  font-family: "Microsoft Yahei";
+}
+.fix_box ul {
+  width: 38px;
+  list-style: none;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 .fix_box ul li {
   height: 40px;
