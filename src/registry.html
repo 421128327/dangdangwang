@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>注册页面</title>
-    <link rel="stylesheet" href="../src/css/registry.css">
+    <link rel="stylesheet" href="../src/css/registry11.css">
     <link rel="stylesheet" href="../src/font/iconfont.css">
+    <script src="./script/require.js" defer async="true" data-main="./script/main.js" id="currentpage" currentmod="registry"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
             <p>欢迎光临当当网，请<a href="login.html">登录</a> <a href="registry.html">免费注册</a></p>
         </div>
     </header>
-    <form action="">
+    <form action="http://localhost/JS2004/Second-step/dangdangwang1/php/registry.php" method="post" id="form1">
         <main>
             <div class="shadowbox">
                 <div class="regbox">
@@ -44,34 +45,34 @@
                         </div>
                         <p>
                             <label for="">用户名</label>
-                            <input type="text" placeholder="请输入您的用户名"><span></span>
+                            <input type="text" placeholder="请输入您的用户名" name="username" id="user"><span></span>
                         </p>
                         <p>
                             <label for="">登录密码</label>
-                            <input type="text"><span></span>
+                            <input type="password" name="password" id="password"><span></span>
                         </p>
                         <p>
                             <label for="">确认密码</label>
-                            <input type="text"><span></span>
+                            <input type="password" id="sure"><span></span>
                         </p>
                         <p>
                             <label for="">邮箱</label>
-                            <input type="text"><span></span>
+                            <input type="text" name="email" id="email"><span></span>
                         </p>
                         <p class="yzm">
                             <label for="">验证码</label>
-                            <input type="text" placeholder="请输入验证码"><span>随机验证码</span><a href="javascript:;">换一个</a><span></span>
+                            <input type="text" placeholder="请输入验证码" id="sureyzm"><span id="yzm">随机验证码</span><a href="javascript:;" id="change">换一个</a><span id="gou"></span>
                         </p>
                         <p class="agree">
                             <label for="">&nbsp;</label>
-                            <input type="checkbox">我已阅读并同意
+                            <input type="checkbox" id="agree">我已阅读并同意
                             <a target="_blank" href="http://help.dangdang.com/details/page12" tabindex="8">《当当交易条款》</a>
                             <a target="_blank" href="http://help.dangdang.com/details/page42" tabindex="9">《当当社区条款》</a>和
                             <a target="_blank" href="http://help.dangdang.com/details/page258" tabindex="10">《当当隐私政策》</a>
                         </p>
                         <p class="submit">
                             <label for=""></label>
-                            <input type="submit" value="立即注册">
+                            <input type="submit" value="立即注册" id="regbtn" name="submit">
                         </p>
                     </div>
                 </div>

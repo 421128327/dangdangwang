@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>商品详情页</title>
-    <link rel="stylesheet" href="../src/css/details.css">
+    <link rel="stylesheet" href="../src/css/details1.css">
     <link rel="stylesheet" href="../src/font/iconfont.css">
     <link rel="stylesheet" href="../src/font/font/iconfont.css">
+    <script src="./script/require.js" defer async="true" data-main="./script/main.js" id="currentpage" currentmod="details1"></script>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 </div>
                 <ul class="infolist">
                     <li>
-                        <a href="javascript:;"><span class="iconfont icon-gouwuche"></span>购物车<span class="cartnum ">0</span></a>
+                        <a href="cartlist.html"><span class="iconfont icon-gouwuche"></span>购物车<span class="cartnum ">0</span></a>
                     </li>
                     <li>
                         <a href="javascript:;">我的订单</a>
@@ -81,7 +82,7 @@
                     </p>
                 </div>
                 <div class="news">
-                    <a href="javascript:;">
+                    <a href="cartlist.html">
                         <span class="iconfont icon-gouwuche"></span>购物车&nbsp; <span>0</span>
                     </a>
                     <a href="javascript:;">我的订单</a>
@@ -125,36 +126,21 @@
         <span class="gt">&gt;</span>
         <a>玄幻/新武侠/魔幻/科幻</a>
         <span class="gt">&gt;</span>
-        <span>龙族3黑月之潮·下</span>
+        <span class="navtitle"></span>
     </div>
     <!-- 图书展示区 -->
     <div class="main">
         <div class="picinfo">
             <div class="pic">
-                <img src="http://img3m0.ddimg.cn/5/21/23414990-2_u_3.jpg" alt="" width="320" height="320">
+                <img width="320" height="320">
+                <div class='move'></div>
+            </div>
+            <div class="bigpic">
+                <img src="http://img3m5.ddimg.cn/8/9/28974635-1_u_2.jpg" width="800" height="800">
             </div>
             <div class="bottom">
                 <div id="ullist">
-                    <ul>
-                        <li>
-                            <img src="http://img3m2.ddimg.cn/88/26/1584873862-1_x_3.jpg">
-                        </li>
-                        <li>
-                            <img src="http://img3m2.ddimg.cn/88/26/1584873862-1_x_3.jpg">
-                        </li>
-                        <li>
-                            <img src="http://img3m2.ddimg.cn/88/26/1584873862-1_x_3.jpg">
-                        </li>
-                        <li>
-                            <img src="http://img3m2.ddimg.cn/88/26/1584873862-1_x_3.jpg">
-                        </li>
-                        <li>
-                            <img src="http://img3m2.ddimg.cn/88/26/1584873862-1_x_3.jpg">
-                        </li>
-                        <li>
-                            <img src="http://img3m2.ddimg.cn/88/26/1584873862-1_x_3.jpg">
-                        </li>
-                    </ul>
+                    <ul></ul>
                 </div>
                 <a href="javascript:;" class="left"><span class="iconfont icon-zuojiantou"></a>
                 <a href="javascript:;" class="right"><span class="iconfont icon-jiantou"></span></a>
@@ -163,12 +149,8 @@
         <div class="showinfo">
             <div class="sale_left">
                 <div class="name_info">
-                    <h1 title="龙族3黑月之潮·下">
-                        龙族3黑月之潮·下
-                    </h1>
-                    <h2 class="hot" title="第八届中国作家富豪榜第1名江南，新作震撼上市！当当网火爆热卖中">
-                        第八届中国作家富豪榜第1名江南，新作震撼上市！当当网火爆热卖中
-                    </h2>
+                    <h1></h1>
+                    <h2 class="hot"></h2>
                 </div>
                 <div class="messbox_info">
                     <span class="t1" id="author">作者:
@@ -180,7 +162,7 @@
                     <span class="t1">出版时间:2013年12月&nbsp;</span>
                     <div class="pinglun">
                         <span class="t1">
-                        <a href="javascript:;">52500</a>条评论
+                        <a href="javascript:;" class="star"></a>
                         </span>
                     </div>
                 </div>
@@ -192,14 +174,14 @@
                                     <span>当当价</span>
                                     <a href="javascript:;">降价通知</a>
                                 </p>
-                                <p id="dd-price"><span class="yen">¥</span>18.40</p>
+                                <p id="dd-price"></p>
                             </div>
-                            <div class="price_zhe" id="dd-zhe">(5折)</div>
+                            <div class="price_zhe" id="dd-zhe"></div>
                         </div>
                         <div id="order-price">
                             <div>
                                 <span>定价</span>
-                                <span class="op"><span class="yen">¥</span>36.80</span>
+                                <span class="op"></span>
                             </div>
                         </div>
                     </div>

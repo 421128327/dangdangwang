@@ -43,6 +43,7 @@ define([], function() {
                     this.index = null;
                 }
                 init() {
+                    this.change();
                     //鼠标移入图片下标,下标和图片发生变化
                     let _this = this.indexbar;
                     let _this1 = this.picbar;
@@ -143,6 +144,23 @@ define([], function() {
                         }, 3000);
                     });
                 }
+                change() { //登录后改变
+                    const $nologin = $('.info_container .info .welcome .nologin');
+                    const $admin = $('.info_container .info .welcome .login_after');
+                    const $span = $('.info_container .info .welcome .login_after .username');
+                    const $close = $('.info_container .info .welcome .login_after a');
+                    if ($.cookie('username')) { //存在
+                        $nologin.hide();
+                        $admin.show();
+                        $span.html($.cookie('username'));
+                    }
+
+                    $close.on('click', () => {
+                        $nologin.show();
+                        $admin.hide();
+                        $.cookie('username', null, { expires: -1, path: '/' });
+                    });
+                }
             }
             new Picbar().init();
             class Menu { //移入菜单效果
@@ -238,6 +256,16 @@ define([], function() {
                     this.backtop.on('click', () => {
                         $(window).scrollTop(0);
                     })
+                    let _this = this;
+                    this.typelist.on('click', function() {
+                        let $top = _this.louceng.eq($(this).index()).offset().top
+                        $('html,body').stop(true).animate({
+                            scrollTop: $top
+                        });
+                    });
+                    this.typelist.on('mouseover', function() {
+                        _this.typelist.eq($(this).index()).addClass('activebox').siblings('li').removeClass('activebox');
+                    });
                 }
             }
             new Louti().init();
@@ -250,6 +278,7 @@ define([], function() {
                     let _this = this.headnotice;
                     let _this1 = this.notice;
                     this.headnotice.on('mouseover', function() {
+                        console.log(this);
                         console.log($(this).index());
                         _this.eq($(this).index()).removeClass('noactli').siblings('li').addClass('noactli');
                         _this1.eq($(this).index()).show().siblings('ul').hide();

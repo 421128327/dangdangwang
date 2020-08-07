@@ -257,7 +257,7 @@ i {
 }
 
 #cart .f1 {
-    width: 202px;
+    width: 210px;
 }
 
 #cart .f1 input {
@@ -330,6 +330,7 @@ i {
     height: 36px;
     overflow: hidden;
     margin-bottom: 27px;
+    margin-left: 46px;
 }
 
 #cart .item .cart_table .price_every {

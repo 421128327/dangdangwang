@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>购物车列表展示</title>
-    <link rel="stylesheet" href="../src/css/cart.css">
+    <link rel="stylesheet" href="../src/css/cart1.css">
+    <script src="./script/require.js" defer async="true" data-main="./script/main.js" id="currentpage" currentmod="cartlist"></script>
 </head>
 
 <body>
@@ -76,7 +77,7 @@
     <div id="cart">
         <ul>
             <li class="f1">
-                <input type="checkbox">
+                <input type="checkbox" class="allselect a1">
                 <span>全选</span>
             </li>
             <li class="f2">商品信息</li>
@@ -86,67 +87,6 @@
             <li class="f4">操作</li>
         </ul>
         <div class="item">
-            <table class="shop_title" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>
-                        <input type="checkbox">
-                    </td>
-                    <td>
-                        <a href="javascript:;">当当自营</a>
-                    </td>
-                </tr>
-            </table>
-            <div class="cart_table">
-                <table cellspacing="0" cellpadding="0" border="0">
-                    <tr>
-                        <td class="row1">
-                            <input type="checkbox">
-                        </td>
-                        <td class="row_img">
-                            <a href="javascript:;">
-                                <img src="http://img3x0.ddimg.cn/5/21/23414990-1_m_4.jpg" alt="" width="80" height="80">
-                            </a>
-                        </td>
-                        <td class="row_name">
-                            <div class="name">
-                                <a href="javascript:;">龙族3黑月之潮·下</a>
-                            </div>
-                        </td>
-                        <td class="price_every">
-                            <span>¥18.40</span>
-                        </td>
-                        <td class="row3">
-                            <span class="amount">
-                                <a href="javascript:;">-</a>
-                                <input type="text" value="1">
-                                <a href="javascript:;">+</a>
-                            </span>
-                        </td>
-                        <td class="row4">
-                            <span class="red">¥0.00</span>
-                        </td>
-                        <td class="row5">
-                            <span>
-                                <a href="javascript:;" class="fn-add-wish">移入收藏</a>
-                            </span>
-                            <span>
-                                <a href="javascript:;" class="fn-remove-product">删除
-                                </a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tfoot>
-                        <tr class="total">
-                            <td class="row1">&nbsp;</td>
-                            <td class="row_img">店铺合计</td>
-                            <td colspan="2">&nbsp;</td>
-                            <td colspan="3" class="row4">
-                                <span class="red big">¥0.00</span>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
         </div>
     </div>
     <!-- 结算 -->
@@ -160,9 +100,9 @@
                 </div>
             </div>
             <div class="sum_left">
-                <input type="checkbox">
+                <input type="checkbox" id="allselect" class='a1'>
                 <span>全选</span>
-                <a href="javascript:;">批量删除</a>
+                <a href="javascript:;" id="delall">全部删除</a>
                 <span class="a">已选择<span class="red">0</span>件商品</span>
             </div>
             <div class="square_right"></div>
