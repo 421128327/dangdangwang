@@ -52,11 +52,12 @@ define([], function() {
                 }
                 formsure() { //表单验证
                     const $span = $('form span');
-                    var usernameflag = true;
-                    var passwordflag = true;
-                    var passsureflag = true;
-                    var yzmflag = true;
-                    var emailflag = true;
+                    let usernameflag = true;
+                    let passwordflag = true;
+                    let passsureflag = true;
+                    let yzmflag = true;
+                    let emailflag = true;
+                    let agreeflag = true;
                     //用户名验证
                     this.username.on('focus', () => {
                         $span.get(0).innerHTML = '数字，字符均可，最长14个字符';
@@ -220,7 +221,12 @@ define([], function() {
                             $span.get(5).style.color = 'red';
                             yzmflag = false;
                         }
-                        if (!usernameflag || !passwordflag || !passsureflag || !emailflag || !yzmflag) {
+                        if (this.agree.prop('checked')) {
+                            agreeflag = true;
+                        } else {
+                            agreeflag = false;
+                        }
+                        if (!usernameflag || !passwordflag || !passsureflag || !emailflag || !yzmflag || !agreeflag) {
                             return false;
                         }
                     });
@@ -236,8 +242,13 @@ define([], function() {
                             }
                         }).done((result) => {
                             if (!result) { //不存在
-                                this.span.eq(0).html('√').css('color', 'green');
-                                $usernameflag = true;
+                                if (this.username.val() == '') {
+                                    this.span.eq(0).html('用户名不能为空').css('color', 'red');
+                                    $usernameflag = false;
+                                } else {
+                                    this.span.eq(0).html('√').css('color', 'green');
+                                    $usernameflag = true;
+                                }
                             } else {
                                 this.span.eq(0).html('该用户名已经存在').css('color', 'red');
                                 $usernameflag = false;
@@ -250,7 +261,7 @@ define([], function() {
                             $usernameflag = false;
                         }
                         if (!$usernameflag) {
-                            return false; //阻止提交
+                            return false;
                         }
                     });
                 }

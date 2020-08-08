@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2020-08-07 09:33:41
+Date: 2020-08-07 11:16:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -61,3 +61,26 @@ INSERT INTO `dangdanggoods` VALUES ('22', 'http://img3m5.ddimg.cn/51/34/26921715
 INSERT INTO `dangdanggoods` VALUES ('23', 'http://img3m6.ddimg.cn/66/10/25272786-1_h_3.jpg', '金楼博阅图书专营店', '52432条评论', '窗边的小豆豆', '窗边的小豆豆(2018版)', '32.90', '¥36.80', '(5.01折)', 'http://img3m7.ddimg.cn/10/25/28993447-1_u_12.jpg,http://img3m7.ddimg.cn/10/25/28993447-2_u_9.jpg,http://img3m7.ddimg.cn/10/25/28993447-3_u_5.jpg,http://img3m7.ddimg.cn/10/25/28993447-4_u_6.jpg,http://img3m7.ddimg.cn/10/25/28993447-5_u_6.jpg');
 INSERT INTO `dangdanggoods` VALUES ('24', 'http://img3m1.ddimg.cn/34/22/28996441-1_h_3.jpg', '金楼博阅图书专营店', '113条评论', '某某', '某某（当当专享：2张添望Q版折卡+望仔同学录透卡+温暖小剧场+“考试必过”书签+《某某》读者综合测试卷）', '34.40', '¥36.80', '(5.01折)', 'http://img3m5.ddimg.cn/8/9/28974635-1_w_2.jpg,http://img3m5.ddimg.cn/8/9/28974635-2_u_2.jpg,http://img3m5.ddimg.cn/8/9/28974635-3_u_2.jpg,http://img3m5.ddimg.cn/8/9/28974635-4_u_3.jpg,http://img3m5.ddimg.cn/8/9/28974635-5_u_2.jpg,http://img3m5.ddimg.cn/8/9/28974635-6_u_3.jpg');
 INSERT INTO `dangdanggoods` VALUES ('25', 'http://img3m6.ddimg.cn/53/3/1135958426-1_h_18.jpg', '楼博阅图书专营店', '500条评论', '哈利波特与魔法石英文原版 Harry Potter an', '哈利波特与魔法石英文原版 Harry Potter an', '24.80', '¥30.80', '(4.01折)', 'http://img3m7.ddimg.cn/10/25/28993447-1_u_12.jpg,http://img3m7.ddimg.cn/10/25/28993447-2_u_9.jpg,http://img3m7.ddimg.cn/10/25/28993447-3_u_5.jpg,http://img3m7.ddimg.cn/10/25/28993447-4_u_6.jpg,http://img3m7.ddimg.cn/10/25/28993447-5_u_6.jpg');
+
+-- ----------------------------
+-- Table structure for `registry`
+-- ----------------------------
+DROP TABLE IF EXISTS `registry`;
+CREATE TABLE `registry` (
+  `sid` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`sid`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of registry
+-- ----------------------------
+INSERT INTO `registry` VALUES ('1', 'jqzh', '1b40534216f70f93bfc1ea85fcafb1d508203250', 'jqzh@163.com', '2020-08-06 16:36:06');
+INSERT INTO `registry` VALUES ('2', 'jqzh1', '1b40534216f70f93bfc1ea85fcafb1d508203250', 'jqzh@163.com', '2020-08-06 16:39:01');
+INSERT INTO `registry` VALUES ('3', 'jqzh123', '1b40534216f70f93bfc1ea85fcafb1d508203250', 'jqzh@163.com', '2020-08-06 16:41:06');
+INSERT INTO `registry` VALUES ('4', 'jqzh1234', '1b40534216f70f93bfc1ea85fcafb1d508203250', 'jqzh@163.com', '2020-08-06 20:54:16');
+INSERT INTO `registry` VALUES ('5', 'jqzh01', '1b40534216f70f93bfc1ea85fcafb1d508203250', 'jqzh@163.com', '2020-08-07 10:59:12');
+INSERT INTO `registry` VALUES ('6', 'jqzh011', '26ac991bad7f8637de3ce3c74ff374aad853a6b2', 'jqzh@163.com', '2020-08-07 11:03:21');

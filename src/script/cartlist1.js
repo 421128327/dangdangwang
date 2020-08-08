@@ -89,15 +89,6 @@ define([], function() {
                                 </table>
                             </div>
                                 `;
-                                // $('#cart .item .fn-remove-product').on('click', function() {
-                                //     window.confirm('你确定要删除吗?');
-                                //     let str = _this.arrsid[this.index];
-                                //     $.cookie('cookiesid', str, {
-                                //         expires: -1,
-                                //         path: '/'
-                                //     });
-                                //     location.reload();
-                                // });
                                 $('#cart .item').get(0).innerHTML += strhtml;
                             }
                         });
@@ -232,9 +223,12 @@ define([], function() {
                             let $value = $(this).val();
                             if (!$reg.test($value)) {
                                 $(this).val(1);
+                                $(this).parents('.cart_table').find('.row4').find('span').html('¥' + $price);
+                            } else {
+                                $(this).parents('.cart_table').find('.row4').find('.sum').html('¥' + ($price * $num).toFixed(2));
+                                $(this).parents('.cart_table').find('.total').find('.row4').find('.big').html('¥' + ($price * $num).toFixed(2));
                             }
-                            $(this).parents('.cart_table').find('.row4').find('.sum').html('¥' + ($price * $num).toFixed(2));
-                            $(this).parents('.cart_table').find('.total').find('.row4').find('.big').html('¥' + ($price * $num).toFixed(2));
+
                             if ($.cookie('cookiesid') && $.cookie('cookienum')) {
                                 arrsid = $.cookie('cookiesid').split(',');
                                 arrnum = $.cookie('cookienum').split(',');
