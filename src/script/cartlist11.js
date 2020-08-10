@@ -27,7 +27,8 @@ define([], function() {
                         $.each(data, function(index, value) {
                             if (value.sid == sid) {
                                 strhtml += `
-                                <table class="shop_title" border="0" cellspacing="0" cellpadding="0">
+                            <div class="cart_table">
+                            <table class="shop_title" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                     <td>
                                         <input type="checkbox" class="all storebox">
@@ -37,7 +38,6 @@ define([], function() {
                                     </td>
                                 </tr>
                             </table>
-                            <div class="cart_table">
                                 <table cellspacing="0" cellpadding="0" border="0">
                                     <tr>
                                         <td class="row1">
@@ -253,9 +253,8 @@ define([], function() {
                                 arrnum = [];
                             }
                             if (window.confirm('你确定要删除吗?')) {
-                                $(this).parents('.item').find('table').remove();
+                                $(this).parents('.cart_table').siblings('table').remove();
                                 $(this).parents('.cart_table').remove();
-
                                 let $index = -1;
                                 let sid = $(this).parents('.cart_table').find('img').attr('sid');
                                 $.each(arrsid, function(index, value) {

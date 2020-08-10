@@ -45,13 +45,14 @@ define([], function() {
                 init() {
                     this.change();
                     //鼠标移入图片下标,下标和图片发生变化
-                    let _this = this.indexbar;
-                    let _this1 = this.picbar;
+                    // let _this = this.indexbar;
+                    // let _this = this.picbar;
+                    let _this = this;
                     let timer = null;
                     this.indexbar.on('mouseover', function() {
                         this.index = $(this).index();
-                        _this.eq(this.index).addClass('active').siblings('li').removeClass('active');
-                        _this1.eq(this.index).stop(true).animate({
+                        this.eq(this.index).addClass('active').siblings('li').removeClass('active');
+                        _this.picbar.eq(this.index).stop(true).animate({
                             opacity: 1
                         }).siblings('li').stop(true).animate({
                             opacity: 0
@@ -81,8 +82,8 @@ define([], function() {
                         if (this.index > 7) {
                             this.index = 0;
                         }
-                        _this.eq(this.index).addClass('active').siblings('li').removeClass('active');
-                        _this1.eq(this.index).stop(true).animate({
+                        this.indexbar.eq(this.index).addClass('active').siblings('li').removeClass('active');
+                        this.picbar.eq(this.index).stop(true).animate({
                             opacity: 1
                         }).siblings('li').stop(true).animate({
                             opacity: 0
@@ -94,8 +95,8 @@ define([], function() {
                         if (this.index < 0) {
                             this.index = 7;
                         }
-                        _this.eq(this.index).addClass('active').siblings('li').removeClass('active');
-                        _this1.eq(this.index).stop(true).animate({
+                        this.indexbar.eq(this.index).addClass('active').siblings('li').removeClass('active');
+                        this.picbar.eq(this.index).stop(true).animate({
                             opacity: 1
                         }).siblings('li').stop(true).animate({
                             opacity: 0

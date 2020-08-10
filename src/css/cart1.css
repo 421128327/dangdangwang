@@ -286,6 +286,7 @@ i {
     height: 24px;
     margin: 10px 0;
     padding-left: 15px;
+    background: white;
 }
 
 #cart .shop_title input {
